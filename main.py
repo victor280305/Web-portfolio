@@ -492,10 +492,9 @@ app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 async def portfolio_home():
     return HTMLResponse(build_page())
 
-
 if __name__ == "__main__":
     import uvicorn
 
     os.makedirs("assets", exist_ok=True)
     os.makedirs("assets/certificates", exist_ok=True)
-   uvicorn.run(app, host="0.0.0.0", port=10000)
+    uvicorn.run(app, host="0.0.0.0", port=10000)
